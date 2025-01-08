@@ -1,0 +1,38 @@
+body {
+  background-color: darkslateblue;
+}
+
+.flashcard {
+    width: 200px;
+    height: 200px;
+    background-color: #443266;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .flashcard.flip {
+    transform: rotateY(180deg);
+  }
+  
+  .flashcard-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Animacja przy najechaniu na fiszkę */
+  .flashcard:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
